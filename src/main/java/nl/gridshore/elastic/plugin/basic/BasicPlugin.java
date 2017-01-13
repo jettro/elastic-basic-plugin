@@ -1,6 +1,5 @@
 package nl.gridshore.elastic.plugin.basic;
 
-import org.elasticsearch.index.analysis.ArabicStemTokenFilterFactory;
 import org.elasticsearch.index.analysis.TokenFilterFactory;
 import org.elasticsearch.indices.analysis.AnalysisModule;
 import org.elasticsearch.plugins.ActionPlugin;
