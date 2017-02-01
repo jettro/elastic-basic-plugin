@@ -6,8 +6,14 @@ import org.elasticsearch.env.Environment;
 import org.elasticsearch.index.IndexSettings;
 import org.elasticsearch.index.analysis.AbstractTokenFilterFactory;
 
+/**
+ * Class is purely used to create instances of the filter class {@link JettroOnlyTokenFilter}
+ */
 public class JettroTokenFilterFactory extends AbstractTokenFilterFactory {
-    public JettroTokenFilterFactory(IndexSettings indexSettings, Environment environment, String name, Settings settings) {
+    public JettroTokenFilterFactory(IndexSettings indexSettings,
+                                    Environment environment,
+                                    String name,
+                                    Settings settings) {
         super(indexSettings, name, settings);
     }
 

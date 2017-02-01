@@ -6,7 +6,7 @@
 
     <groupId>nl.gridshore</groupId>
     <artifactId>elastic-basic-plugin</artifactId>
-    <version>5.1.2-SNAPSHOT</version>
+    <version>5.1.2-1-SNAPSHOT</version>
     <name>Plugin: Basic</name>
     <description>Basic elasticsearch plugin to try out stuff</description>
 

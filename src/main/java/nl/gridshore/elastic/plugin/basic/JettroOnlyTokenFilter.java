@@ -9,15 +9,16 @@ import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import java.io.IOException;
 
 /**
- * Created by jettrocoenradie on 13/01/2017.
+ * Filters that removes all token accept for <em>jettro</em>. The filter is even case sensitive. So using
+ * it in combination with a lowercase filter might be good.
  */
 public class JettroOnlyTokenFilter extends FilteringTokenFilter {
-    protected final Logger logger = LogManager.getLogger(getClass());
+    private final Logger LOGGER = LogManager.getLogger(getClass());
 
     private final CharTermAttribute termAtt = addAttribute(CharTermAttribute.class);
 
     /**
-     * Create a new {@link FilteringTokenFilter}.
+     * Create a new {@link JettroOnlyTokenFilter}.
      *
      * @param in the {@link TokenStream} to consume
      */
@@ -27,7 +28,7 @@ public class JettroOnlyTokenFilter extends FilteringTokenFilter {
 
     @Override
     protected boolean accept() throws IOException {
-        logger.info("Term to check for 'jettro' {}", termAtt.toString());
+        LOGGER.info("Term to check for 'jettro' {}", termAtt.toString());
 
         return termAtt.toString().equals("jettro");
     }
